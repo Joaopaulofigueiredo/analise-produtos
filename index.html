@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de Produtos</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <button class="home-button" onclick="window.location.href='index.html';"><i class="fas fa-home"></i> Home</button>
+    
+    <header class="container">
+        <h1>Análise de Produtos</h1>
+        <form class="search-form">
+            <input type="text" placeholder="Digite o nome do Produto" class="product-input">
+            <div class="price-filter">
+                <label for="min-price">Preço Mínimo:</label>
+                <input type="text" id="min-price" name="min-price" placeholder="R$" min="0">
+                
+                <label for="max-price">Preço Máximo:</label>
+                <input type="text" id="max-price" name="max-price" placeholder="R$" min="0">
+            </div>
+            <label for="category">Categoria:</label>
+            <select id="category" name="category">
+                <option value="">Selecione uma categoria</option>
+                <option value="MLB1051">Eletrônicos</option>
+                <option value="MLB1430">Moda</option>
+                <option value="MLB1574">Casa e Jardim</option>
+                <option value="MLB1246">Beleza e Cuidado Pessoal</option>
+                <option value="MLB1276">Esportes e Fitness</option>
+                <option value="MLB1743">Automóveis</option>
+                <option value="MLB1132">Brinquedos e Hobbies</option>
+                <option value="MLB5726">Eletrodomésticos</option>
+                <option value="MLB1196">Livros, Revistas e Comics</option>
+                <option value="MLB267">Saúde</option>
+            </select>
+            <button type="submit" class="search-button">Buscar</button>
+        </form>
+    </header>
+
+    <main class="container">
+        <section class="product-results">
+            <div class="loading-indicator">Carregando...</div>
+            <ul class="product-list"></ul>
+        </section>
+        <div class="chart-container">
+            <canvas id="price-chart"></canvas>
+        </div>
+        <div id="search-time" class="search-time"></div>
+        <div class="pagination">
+            <button class="prev-page" disabled>Anterior</button>
+            <button class="next-page">Próximo</button>
+        </div>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>

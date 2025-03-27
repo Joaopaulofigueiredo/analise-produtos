@@ -1,0 +1,296 @@
+/* Estilos gerais */
+body {
+    background: linear-gradient(to right, #1e3c72, #2a5298); /* Fundo gradiente moderno */
+    color: #333; /* Cor padrão do texto */
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Contêiner principal */
+.container {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 0 20px;
+    background-color: #ffffff; /* Fundo branco para o contêiner */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+/* Estilos do formulário de busca */
+.search-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-form input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.search-form button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.search-form button:hover {
+    background-color: #217dbb;
+    transform: scale(1.05);
+}
+
+.price-filter {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.price-filter label {
+    margin-right: 5px;
+    font-weight: bold;
+    color: #444;
+}
+
+.price-filter input[type="text"] {
+    width: 150px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Estilos da lista de produtos */
+.product-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fefefe;
+    color: #333; /* Texto em cor escura */
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.product-card-info {
+    flex-grow: 1;
+}
+
+.product-card h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: #2a5298;
+}
+
+.product-price {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #27ae60;
+}
+
+.product-store,
+.product-condition,
+.product-sold-quantity {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.product-link {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.product-link:hover {
+    background-color: #217dbb;
+    transform: scale(1.05);
+}
+
+.loading-indicator {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    font-style: italic;
+    color: #444;
+}
+
+.error-message, .no-results {
+    text-align: center;
+    margin-top: 20px;
+    color: red;
+}
+
+/* Estilos do gráfico */
+.chart-container {
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco translúcido */
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    color: #333; /* Texto escuro */
+}
+
+/* Estilos do horário da pesquisa */
+#search-time {
+    font-size: 0.9em; /* Tamanho reduzido */
+    font-style: italic;
+    color: #ffffff;
+    margin-top: 10px;
+    text-align: right;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+/* Estilos de paginação */
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.pagination button:hover {
+    background-color: #217dbb;
+    transform: scale(1.05);
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Botão Home */
+.home-button {
+    padding: 10px 20px;
+    background-color: #3498db; /* Cor do fundo */
+    color: #fff; /* Cor do texto */
+    border: none;
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer;
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave */
+}
+
+.home-button:hover {
+    background-color: #217dbb; /* Cor do fundo ao passar o mouse */
+    transform: scale(1.05); /* Aumenta ligeiramente o botão */
+}
+
+.home-button i {
+    margin-right: 8px; /* Espaçamento entre o ícone e o texto */
+    font-size: 18px; /* Tamanho do ícone */
+}
+
+/* Botão Comparar */
+.compare-button {
+    padding: 5px 10px;
+    background-color: #f39c12; /* Cor do fundo */
+    color: #fff; /* Cor do texto */
+    border: none;
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer;
+    font-size: 14px; /* Tamanho da fonte */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave */
+    margin-top: 5px;
+}
+
+.compare-button:hover {
+    background-color: #e67e22; /* Cor do fundo ao passar o mouse */
+    transform: scale(1.05); /* Aumenta ligeiramente o botão */
+}
+
+/* Estilos da área de comparação */
+.compare-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.compare-card {
+    width: 30%;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fefefe;
+    margin-bottom: 20px;
+}
+
+.compare-card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.compare-card h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: #2a5298;
+}
+
+.compare-card .product-price {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #27ae60;
+}
+
+.compare-card .product-store,
+.compare-card .product-condition,
+.compare-card .product-sold-quantity {
+    font-size: 0.9em;
+    color: #555;
+}

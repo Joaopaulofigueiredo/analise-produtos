@@ -1,0 +1,18 @@
+# Pastas do Windows
+Ambiente de Impressão/
+Ambiente de Rede/
+Configurações Locais/
+Cookies/
+Dados de Aplicativos/
+
+# Arquivos temporários
+*.log
+*.tmp
+
+# Dependências
+node_modules/
+venv/
+
+# Configurações de IDE
+.vscode/
+.idea/
